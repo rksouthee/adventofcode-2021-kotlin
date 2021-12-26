@@ -57,7 +57,7 @@ fun main() {
                 if (index == -1) {
                     continue
                 }
-                board[index] = -board[index]
+                board[index] = -1
             }
 
             val pair = boards.partition { isBingo(it) }
@@ -79,6 +79,7 @@ fun main() {
     val testInput = readInput("Day04_test")
     val testScores = getScores(testInput)
     check(part1(testScores) == 4512)
+    check(part2(testScores) == 1924)
 
     val input = readInput("Day04")
     val scores = getScores(input)
